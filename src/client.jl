@@ -57,6 +57,8 @@ Check that the storage URL is still the right one and update it if needed
 """
 function discover_storage(client::RemarkableClient; kwargs...)
     @info "Discovering storage host"
+    #SERVICE_DISCOVERY_API = "https://webapp.cloud.remarkable.com"
+    SERVICE_DISCOVERY_API = "https://service-manager-production-dot-remarkable-production.appspot.com"
     body = HTTP.request(
         client,
         "GET",
